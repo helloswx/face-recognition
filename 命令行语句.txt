@@ -1,0 +1,20 @@
+
+
+python D:\PycharmProjects\face_recognition\build-face-dataset\build_face_dataset.py --cascade D:\PycharmProjects\face_recognition\build-face-dataset\haarcascade_frontalface_default.xml --output D:\PycharmProjects\face_recognition\opencv-face-recognition\dataset\swx
+
+
+python D:\PycharmProjects\face_recognition\opencv-face-recognition\extract_embeddings.py --dataset D:\PycharmProjects\face_recognition\opencv-face-recognition\dataset --embeddings D:\PycharmProjects\face_recognition\opencv-face-recognition\output\embeddings.pickle --detector D:\PycharmProjects\face_recognition\opencv-face-recognition\face_detection_model  --embedding-model D:\PycharmProjects\face_recognition\opencv-face-recognition\openface_nn4.small2.v1.t7
+
+python D:\PycharmProjects\face_recognition\opencv-face-recognition\train_model.py --embeddings  D:\PycharmProjects\face_recognition\opencv-face-recognition\output\embeddings.pickle --recognizer D:\PycharmProjects\face_recognition\opencv-face-recognition\output\recognizer.pickle --le D:\PycharmProjects\face_recognition\opencv-face-recognition\output\le.pickle
+
+python D:\PycharmProjects\face_recognition\opencv-face-recognition\recognize.py  --detector D:\PycharmProjects\face_recognition\opencv-face-recognition\face_detection_model --embedding-model D:\PycharmProjects\face_recognition\opencv-face-recognition\openface_nn4.small2.v1.t7 --recognizer D:\PycharmProjects\face_recognition\opencv-face-recognition\output\recognizer.pickle  --le D:\PycharmProjects\face_recognition\opencv-face-recognition\output\le.pickle --image D:\PycharmProjects\face_recognition\opencv-face-recognition\images\swx.jpg
+
+python D:\PycharmProjects\face_recognition\opencv-face-recognition\recognize_video.py  --detector D:\PycharmProjects\face_recognition\opencv-face-recognition\face_detection_model --embedding-model D:\PycharmProjects\face_recognition\opencv-face-recognition\openface_nn4.small2.v1.t7 --recognizer D:\PycharmProjects\face_recognition\opencv-face-recognition\output\recognizer.pickle  --le D:\PycharmProjects\face_recognition\opencv-face-recognition\output\le.pickle
+
+
+
+
+
+
+
+python D:\PycharmProjects\face_recognition\OpenCVAgeDetection\detect_age.py --image D:\PycharmProjects\face_recognition\OpenCVAgeDetection\images\wsb.png --face D:\PycharmProjects\face_recognition\OpenCVAgeDetection\face_detector --age D:\PycharmProjects\face_recognition\OpenCVAgeDetection\age_detector
